@@ -6,15 +6,46 @@
 body {
     background-image: url(./img/background.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    font-size: 12px;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-size: 1em;
     font-family: Lato,sans-serif; 
-    color: rgb(184, 184, 184);
+    color: rgb(250, 245, 245);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-weight: 500;
 }
 .overlay {
-    background-color: black;
-    height: 100%;
-    opacity: 85%;
+    
+    background-image: linear-gradient(transparent,black);
+}
+.holder {
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content:space-between;
+    background-image: linear-gradient(black,transparent);
+}
+#main-container {
+    /* background-image: linear-gradient(transparent,black); */
+    opacity: .9;
+}
+
+img {
+    
+    z-index: 1;
+}
+.nav-link:hover {
+    transform: scale(1.1);
+    transition: transform .3s ease-in;
+}
+li {
+    text-decoration: underline;
+}
+.contact {
+    list-style-type: none;
+    text-decoration: none;
 }

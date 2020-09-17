@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Icons from Font Awsome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <!-- Fonts from Google Fonts "Lato" -->
@@ -13,36 +15,73 @@
 </head>
 <body>
     <!-- Backgroud dark overlay -->
-    <div class="overlay">
+    <div class="overlay h-100">
 
         <!-- Container for everything -->
-        <div class="container container-fluid">
+        <div class="holder container-fluid h-100  p-0 m-0">
 
             <!-- Container for header -->
-            <div class="header">
+            <div class="header d-flex flex-column justify-content-around align-items-center">
 
                 <!-- Container for title -->
-                <div class="title"></div>
-
+                <div class="title m-2 p-1"><h1>Nandan Tyagi</h1></div>
                 <!-- Container for nav -->
-                <div class="navbar">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                <div class="container-fluid w-100">
+                    <nav class="navbar justify-content-center ">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white nav-tabs" id="home-btn"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white" id="about-btn"><i class="far fa-address-card"></i>&nbsp;&nbsp;About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white" id="contact-btn"><i class="fas fa-at"></i>&nbsp;&nbsp;Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
             </div>
+             
+             
 
-            <!-- Container for main content -->
-            <div class="container container-fluid main"></div>
+            <!-- Container for main content home view -->
+            <div class="container container-fluid main w-100 h-100 mt-2 p-2 d-flex flex-column justify-content-center align-items-center rounded" id="main-container">
+
+                <h2><em>Need a great coworker...?</em></h2>
+                <p><i><em>In real life</em>, especially at work, you need special kind of people arround you, so that you have the optimum oppotunity to flourish and grow to your greatest potential.</i></p> <p><i>These are the main character featurs I admire and strive after: </i></p> 
+                <ul>
+                    <li>Benevoulent</li>
+                    <li>Aspiring</li>
+                    <li>Humble</li>
+                    <li>Curious</li>
+                    <li>Motivated</li>
+                    <li>Responsible</li>
+                    <li>Collaborative</li>
+                    <li>Reliable</li>
+                </ul>
+                <p>In the software industry, in my opinion, these are the basic soft skills that are extremly valuable.</p>
+                 
+                
+            </div>
 
             <!-- Container for footer -->
-            <div class="footer container-fluid"></div>
+            <div class="footer container mt-3 container-fluid d-flex justify-content-center rounded-top">&nbsp; 
+                <a href="https://www.blog.mahanandan.com" target="_blank" title="Check out my blog!" class="text-white">My blog</a>&nbsp; | &nbsp; 
+                <a href="http://www.mahanandan.com" target="_blank" title="Check out my projects!"  class="text-white">My projects</a>&nbsp;| &nbsp;
+                <span><a href="https://www.github.com/nandantyagi" target="_blank" title="Check out my Github profile!"  class="text-white"><i class="fab fa-github"></i></a></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <span><a href="https://www.linkedin.com/in/mahanandan-tyagi-3273181b/?originalSubdomain=se" target="_blank" title="Chek out my LinkedIn profile!" class="text-white"><i class="fab fa-linkedin"></i></a></span>&nbsp;&nbsp;|&nbsp;
+                <span class="text-white">&nbsp;&copy; &nbsp;2020</span>
+            </div>
 
         </div>
     </div>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- My own JS -->
     <script src="./script.js"></script>
 </body>
 </html>
