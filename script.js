@@ -82,7 +82,7 @@ function renderContactVeiw() {
     // Add/Remove nav tabs to show active page 
     app.navAbout.classList.remove('nav-tabs');
     app.navHome.classList.remove('nav-tabs');
-    pp.navCv.classList.remove('nav-tabs');
+    app.navCv.classList.remove('nav-tabs');
     app.navContact.classList.add('nav-tabs');
 }
 
