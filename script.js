@@ -41,7 +41,7 @@ function renderContactVeiw() {
     app.mainContainer.innerHTML = "";
     app.mainContainer.innerHTML = `
                 <h2 class="pb-3 "><em>Get in touch!</em></h2>
-                <p><i><em>I would love to gett in together and plan a future venture. </em></i></p> <p class="text-center"><i>Why wait? Hit me up right now, we can discuss it over a coffee or two :P </i></p> 
+                <p><i><em>I would love to get in together and plan a future venture. </em></i></p> <p class="text-center"><i>Why wait? Hit me up right now, we can discuss it over a coffee or two :P </i></p> 
                 <ul class="mt-2">
                     <li class="contact d-flex justify-content-center align-items-center pb-2 "><i class="far fa-envelope mr-4"></i><a href="mailto:me@nandantyagi.com" class="text-white"> me@nandantyagi.com</a></li>
                     <li class="contact"><i class="fas fa-phone-alt mr-4"></i><a href="tel:+46707801266" class="text-white">Call me</a></li>
