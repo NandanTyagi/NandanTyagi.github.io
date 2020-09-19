@@ -92,8 +92,8 @@ function renderCvVeiw() {
     app.mainContainer.innerHTML = "";
     app.mainContainer.innerHTML = `
             <figure>
-                <a href="./img/Nandan_Tyagi_CV .jpg" target="_blank" rel="noopener noreferrer">
-                <img src="./img/Nandan_Tyagi_CV .jpg" alt="My CV" title="My CV" width="80%" class="cv">
+                <a href="./img/Nandan_Tyagi_CV.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="./img/Nandan_Tyagi_CV.jpg" alt="My CV" title="My CV" width="80%" class="cv">
                 </a>
             </figure>
     `;
