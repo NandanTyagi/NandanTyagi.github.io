@@ -35,7 +35,7 @@ function renderAboutVeiw() {
 function renderHomeVeiw() {
     app.mainContainer.innerHTML = '';
     app.mainContainer.innerHTML = `
-                <h2 class="mb-4"><em>Need a great coworker...?</em></h2>
+                <h2 class="mb-4"><em>Need a great team member...?</em></h2>
                 <p><i><em>In real life</em>, especially at work, you need special kind of people around you, so that you have the optimum oppotunity to flourish and grow to your greatest potential.</i></p> <p><i>These are the main characteristics I admire and strive after: </i></p> 
                 <ul class="list-side">
                     <li>Benevoulent</li>
