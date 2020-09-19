@@ -12,15 +12,16 @@ const app = {
 function renderAboutVeiw() {
     app.mainContainer.innerHTML = '';
     app.mainContainer.innerHTML = `
-                <a href="./img/Mahanandan Tyagi orginal.jpg" target="_blank" class="d-flex justify-content-center">
-                    <img src="./img/Mahanandan Tyagi.jpg" class="rounded-circle"  alt="Nandan's profile picture" title="Nandan Tyagi" />
+                <a href="./img/Mahanandan_Tyagi_orginal.jpg" target="_blank" class="d-flex justify-content-center">
+                    <img src="./img/Mahanandan_Tyagi.jpg" class="rounded-circle"  alt="Nandan's profile picture" title="Nandan Tyagi" />
                 </a>
                 <p class="lead p-1">I am Nandan,</p>
                 <p class="text-center lead">
                     I love programming and web development. I love learning new things and creating value for people around me. I am always ready to offer a helping hand if anyone needs it.
                 </p>
                 <p class="text-center">
-                    In the past I have been a semiprofessional tennis player. I was ranked 6th in India and I beat the 3rd ranked player in Sweden, as a junior. I am also a tennis coach. For the past decade I have been working as a manager in the retail bussiness. Now I am changing my career to software development and I am studying Webdevelopment.NET. My goal is to work in the webdevelopment industry by 2022.
+                    In the past I have been a semiprofessional tennis player. I was ranked 6th in India as a junior. I am also a tennis coach.<br />
+                    For the past decade I have been working as a manager in the retail bussiness. Now I am changing my career to software development and I am studying Webdevelopment.NET. My goal is to work in the webdevelopment industry by 2022.
                 </p>
     `;
     // Add/Remove nav tabs to show active page
@@ -35,7 +36,7 @@ function renderHomeVeiw() {
     app.mainContainer.innerHTML = '';
     app.mainContainer.innerHTML = `
                 <h2 class="mb-4"><em>Need a great coworker...?</em></h2>
-                <p><i><em>In real life</em>, especially at work, you need special kind of people arround you, so that you have the optimum oppotunity to flourish and grow to your greatest potential.</i></p> <p><i>These are the main character featurs I admire and strive after: </i></p> 
+                <p><i><em>In real life</em>, especially at work, you need special kind of people around you, so that you have the optimum oppotunity to flourish and grow to your greatest potential.</i></p> <p><i>These are the main characteristics I admire and strive after: </i></p> 
                 <ul class="list-side">
                     <li>Benevoulent</li>
                     <li>Aspiring</li>
@@ -91,8 +92,8 @@ function renderCvVeiw() {
     app.mainContainer.innerHTML = "";
     app.mainContainer.innerHTML = `
             <figure>
-                <a href="./img/Nandan Tyagi_CV .jpg" target="_blank" rel="noopener noreferrer">
-                <img src="./img/Nandan Tyagi_CV .jpg" alt="My CV" title="My CV" width="80%" class="cv">
+                <a href="./img/Nandan_Tyagi_CV.jpg" target="_blank" rel="noopener noreferrer">
+                <img src="./img/Nandan_Tyagi_CV.jpg" alt="My CV" title="My CV" width="80%" class="cv">
                 </a>
             </figure>
     `;
