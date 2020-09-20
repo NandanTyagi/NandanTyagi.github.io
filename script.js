@@ -6,8 +6,7 @@ const app = {
     navContact: document.getElementById('nav-contact'),
     navCv: document.getElementById('nav-cv'),
     mainContainer: document.getElementById('article')
-}
-
+} 
 // Show about view
 function renderAboutVeiw() {
     app.mainContainer.innerHTML = '';
@@ -25,12 +24,8 @@ function renderAboutVeiw() {
                 </p>
     `;
     // Add/Remove nav tabs to show active page
-    app.navContact.classList.remove('nav-tabs');
-    app.navHome.classList.remove('nav-tabs');
-    app.navCv.classList.remove('nav-tabs');
-    app.navAbout.classList.add('nav-tabs');
+    uiView('about');
 }
-
 // Show home view
 function renderHomeVeiw() {
     app.mainContainer.innerHTML = '';
@@ -52,13 +47,8 @@ function renderHomeVeiw() {
                 </p>
     `;
     // Add/Remove nav tabs to show active page 
-    app.navContact.classList.remove('nav-tabs');
-    app.navAbout.classList.remove('nav-tabs');
-    app.navCv.classList.remove('nav-tabs');
-    app.navHome.classList.add('nav-tabs');
-    
+    uiView('home');
 }
-
 // Show contact view
 function renderContactVeiw() {
     app.mainContainer.innerHTML = "";
@@ -81,12 +71,8 @@ function renderContactVeiw() {
                 </ul>
     `;
     // Add/Remove nav tabs to show active page 
-    app.navAbout.classList.remove('nav-tabs');
-    app.navHome.classList.remove('nav-tabs');
-    app.navCv.classList.remove('nav-tabs');
-    app.navContact.classList.add('nav-tabs');
+    uiView('contact');
 }
-
 // Show CV
 function renderCvVeiw() {
     app.mainContainer.innerHTML = "";
@@ -98,10 +84,31 @@ function renderCvVeiw() {
             </figure>
     `;
     // Add/Remove nav tabs to show active page 
-    app.navAbout.classList.remove('nav-tabs');
-    app.navHome.classList.remove('nav-tabs');
-    app.navContact.classList.remove('nav-tabs');
-    app.navCv.classList.add('nav-tabs');
+    uiView('cv');
+}
+// Add/Remove nav tabs to show active page function 
+function uiView(page) {
+    if(page === 'home') {
+        app.navContact.classList.remove('nav-tabs');
+        app.navHome.classList.add('nav-tabs');
+        app.navCv.classList.remove('nav-tabs');
+        app.navAbout.classList.remove('nav-tabs');
+    }else if(page === 'about') {
+        app.navContact.classList.remove('nav-tabs');
+        app.navHome.classList.remove('nav-tabs');
+        app.navCv.classList.remove('nav-tabs');
+        app.navAbout.classList.add('nav-tabs');
+    }else if(page === 'contact') {
+        app.navContact.classList.add('nav-tabs');
+        app.navHome.classList.remove('nav-tabs');
+        app.navCv.classList.remove('nav-tabs');
+        app.navAbout.classList.remove('nav-tabs');
+    }else if(page === 'cv') {
+        app.navContact.classList.remove('nav-tabs');
+        app.navHome.classList.remove('nav-tabs');
+        app.navCv.classList.add('nav-tabs');
+        app.navAbout.classList.remove('nav-tabs'); 
+    }
 }
 // Eventlisteners
 app.navHome.addEventListener('click', renderHomeVeiw);
