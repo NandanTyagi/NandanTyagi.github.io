@@ -5,6 +5,8 @@ const app = {
     navAbout: document.getElementById('nav-about'),
     navContact: document.getElementById('nav-contact'),
     navCv: document.getElementById('nav-cv'),
+    navRepos: document.getElementById('nav-repos'),
+    repoDiv0: document.getElementById('repo-display-0'),
     mainContainer: document.getElementById('article')
 } 
 // Show about view
@@ -30,7 +32,7 @@ function renderAboutVeiw() {
 function renderHomeVeiw() {
     app.mainContainer.innerHTML = '';
     app.mainContainer.innerHTML = `
-                <h2 class="mb-4"><em>Need a great coworker...?</em></h2>
+                <h2 class="mb-4"><em>Need a great team member...?</em></h2>
                 <p><i><em>In real life</em>, especially at work, you need special kind of people around you, so that you have the optimum oppotunity to flourish and grow to your greatest potential.</i></p> <p><i>These are the main characteristics I admire and strive after: </i></p> 
                 <ul class="list-side">
                     <li>Benevoulent</li>
@@ -73,6 +75,29 @@ function renderContactVeiw() {
     // Add/Remove nav tabs to show active page 
     uiView('contact');
 }
+
+// Show repos view
+function renderRepoView(){
+    app.mainContainer.innerHTML = "";
+    // Fetch and display repos from github
+    function displayRepos() {
+    fetch('https://api.github.com/users/NandanTyagi/repos')
+    .then(res => res.json())
+    .then(res => {
+        console.log(res);
+        let repoHTML = '<h2>My Github repos</h2><div class="mini-grid" id="grid-container">';
+        for(let i = 0; i < res.length; i++) {
+            repoHTML += `<div class="repo-display" id="repo-display-${i}"><a href="${res[i].clone_url}" target="_blank">${res[i].name}</a></div>`;
+        }
+        repoHTML += '</div>'
+        app.mainContainer.innerHTML = repoHTML;
+    });
+}
+    // Add/Remove nav tabs to show active page
+    uiView('repo');
+    // Make it happen
+    displayRepos();
+}
 // Show CV
 function renderCvVeiw() {
     app.mainContainer.innerHTML = "";
@@ -93,21 +118,31 @@ function uiView(page) {
         app.navHome.classList.add('nav-tabs');
         app.navCv.classList.remove('nav-tabs');
         app.navAbout.classList.remove('nav-tabs');
+        app.navRepos.classList.remove('nav-tabs');
     }else if(page === 'about') {
         app.navContact.classList.remove('nav-tabs');
         app.navHome.classList.remove('nav-tabs');
         app.navCv.classList.remove('nav-tabs');
         app.navAbout.classList.add('nav-tabs');
+        app.navRepos.classList.remove('nav-tabs');
     }else if(page === 'contact') {
         app.navContact.classList.add('nav-tabs');
         app.navHome.classList.remove('nav-tabs');
         app.navCv.classList.remove('nav-tabs');
         app.navAbout.classList.remove('nav-tabs');
+        app.navRepos.classList.remove('nav-tabs');
     }else if(page === 'cv') {
         app.navContact.classList.remove('nav-tabs');
         app.navHome.classList.remove('nav-tabs');
         app.navCv.classList.add('nav-tabs');
         app.navAbout.classList.remove('nav-tabs'); 
+        app.navRepos.classList.remove('nav-tabs');
+    }else if(page === 'repo') {
+        app.navContact.classList.remove('nav-tabs');
+        app.navHome.classList.remove('nav-tabs');
+        app.navCv.classList.remove('nav-tabs');
+        app.navAbout.classList.remove('nav-tabs'); 
+        app.navRepos.classList.add('nav-tabs');
     }
 }
 // Eventlisteners
@@ -115,3 +150,4 @@ app.navHome.addEventListener('click', renderHomeVeiw);
 app.navAbout.addEventListener('click', renderAboutVeiw);
 app.navContact.addEventListener('click', renderContactVeiw);
 app.navCv.addEventListener('click', renderCvVeiw);
+app.navRepos.addEventListener('click', renderRepoView);
