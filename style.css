@@ -175,14 +175,22 @@ a i:hover {
 .list-side {
     text-align: justify;
 }
+@media screen and (max-height:719px) {
+    body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}
 @media screen and (max-height:650px) {
     body {
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 }
 @media screen and (max-width:420px) {
     body {
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     .nav ul li {
         padding: .5em;
