@@ -10,23 +10,25 @@ body {
     background-size: 100vw 100vh;
     background-position: center center;
     background-attachment: fixed;
-    max-height: 100vh;
     font-size: 1em;
     font-family: Lato,sans-serif; 
     color: rgb(250, 245, 245);
     overflow: hidden;
     font-weight: 500;
     text-align: center;
-    line-height: 1.8;    
+    line-height: 1.8;  
+    min-height: 100vh;
+    min-width: 100vw;  
 }
 /* Darkening the background image with gradients from both sides */
 .overlay {
-    min-height: 100vh;
+    
     background-image: linear-gradient(transparent,black);
     background-size: cover;
 }
 .overlay-reverse {
     min-height: 100vh;
+    min-width: 100vw;
     justify-content:space-between;
     background-image: linear-gradient(black,transparent);
     background-size: cover;
@@ -39,20 +41,20 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 60px 50px auto 40px;
+    grid-template-rows: 70px 60px auto 40px;
     grid-template-areas: 
     "h h h h h h h h h h h h"
     "n n n n n n n n n n n n"
     "a a a a a a a a a a a a"
     "f f f f f f f f f f f f";
     max-width: 900px;
+    
 }
 .header {
     grid-area: h;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1em;
 }
 /* Navigation */
 .nav {
@@ -73,6 +75,7 @@ body {
 }
 .navi{
     color: white;
+    font-size: 1.3em;
 }
 .navi:hover{
     color: grey;
@@ -86,9 +89,14 @@ body {
     grid-area: a;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     padding: 2em;
+    font-size: 1em;
+    
+}
+.article h2 {
+    margin-bottom: 2em;
 }
 img {
     width: 150px;
@@ -100,6 +108,39 @@ img {
 .cv:hover {
     transform: scale(1.2);
     transition: transform .2s ease-in-out;
+}
+/* Repo view */
+.mini-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template: auto/repeat(4,minmax(20px,1fr));
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.repo-display {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 4em;
+    margin: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.repo-display a {
+    color: white;
+}
+.repo-display a:hover {
+    color: ghostwhite;
+}
+.repo-display:hover {
+    transform: scale(0.95);
+    transition: transform 0.2s ease-in-out;
+    border-color: purple;
 }
 /* Footer */
 .footer {
@@ -145,5 +186,8 @@ a i:hover {
     }
     .nav ul li {
         padding: .5em;
+    }
+    .repo-display {
+        font-size:0.4em;
     }
 }
