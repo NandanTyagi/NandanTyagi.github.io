@@ -191,6 +191,7 @@ a i:hover {
     body {
         overflow-y: scroll;
         overflow-x: hidden;
+        font-size: small;
     }
     .nav ul li {
         padding: .5em;
